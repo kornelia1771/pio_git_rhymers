@@ -8,6 +8,10 @@ public class DefaultCountingOutRhymer {
     private static final int EMPTY_RHYMER_INDEX = -1;
     private final int[] NUMBERS = new int[TAB_SIZE];
 
+    public int getTotal() {
+        return total;
+    }
+
     private int total = EMPTY_RHYMER_INDEX;
 
     protected void countIn(int in) {
@@ -34,5 +38,4 @@ public class DefaultCountingOutRhymer {
             return DEFAULT_VALUE;
         return NUMBERS[total--];
     }
-
 }
